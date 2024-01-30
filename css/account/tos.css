@@ -1,0 +1,30 @@
+#banner
+{
+	color:		#BBBBFF;
+	margin-bottom:	0;
+	text-align:	center;
+}
+#content p
+{
+	font-size:	15px;
+	color:		#BBBBDD;
+	font-weight:	bold;
+}
+blockquote
+{
+	background-color:	#0C0C0C;
+
+	border-color:		#AAAAAA;
+	border-radius:		8px;
+
+	text-align:		justify;
+}
+blockquote > blockquote
+{
+	background-color:	#151515;
+}
+ul
+{
+	padding-left:		5px;
+	margin-bottom:		0px;
+}

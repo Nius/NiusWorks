@@ -1,0 +1,153 @@
+.card
+{
+	border:		1px #333333 solid;
+	border-radius:	8px;
+	margin-bottom:	10px;
+	padding:	2px 2px 0px 0px;
+}
+.hp
+{
+	margin:		0px;
+	margin-bottom:	2px;
+	border-bottom:	1px #333333 solid;
+	padding-left:	5px;
+
+	font-weight:	bold;
+	font-size:	14px;
+}
+
+#s_ht
+{
+	width:		100%;
+}
+#s_ht td
+{
+	border-bottom: 1px #333333 solid;
+}
+#s_ht .hp
+{
+	border:		none;
+}
+#s_ht .right
+{
+	padding-right:	5px;
+}
+#statusP, #statusDateP
+{
+	margin-bottom:	0px;
+	padding-left:	5px;
+}
+#statusDateP
+{
+	color:		#888888;
+	font-style:	italic;
+	font-size:	10px;
+}
+#statusP
+{
+	color:		#88BB88;
+}
+
+.table>thead>tr>th,	.table>tbody>tr>th,
+.table>tfoot>tr>th,	.table>thead>tr>td,
+.table>tbody>tr>td,	.table>tfoot>tr>td
+{
+	border-top:	none;
+	border-bottom:	1px #333333 solid;
+	vertical-align:	middle;
+}
+.thi
+{
+	height:		25px;
+	margin-right:	5px;
+}
+.cn_cell
+{
+	cursor:		pointer;
+}
+#ec_cell>.table>tbody>tr>td, #ec_cell
+{
+	border-bottom:	none;
+	width:		50%;
+}
+#ec_cell
+{
+	height:		55px;
+}
+table.table.table-condensed
+{
+	margin-bottom:	0px;
+}
+.table.table
+{
+	background-color:	#000000;
+}
+
+#mchead, #mcflag
+{
+	max-height:	34px;
+}
+
+.mcf
+{
+	font-family:	minecraftfont;
+	font-size:	10.25px;
+}
+
+a.lpLink
+{
+	text-decoration:	none;
+}
+.lpLink:hover div
+{
+	background-color:	#0C0C0C;
+	padding:		-5px;
+}
+a.lpLink #statusP
+{
+	color:		#CCCC88;
+}
+
+#endorseD table tr td
+{
+	vertical-align:	top;
+}
+#endorseD table tr td:first-child
+{
+	text-align:	left;
+	padding-right:	7px;
+}
+#end_img
+{
+	max-width:	150px;
+	max-height:	150px;
+}
+#end_img_cap
+{
+	font-size:	0.75em;
+	font-style:	italic;
+	text-align:	left;
+}
+#endorseD a
+{
+	text-decoration:	none;
+	color:			inherit;
+}
+#endorseD tbody
+{
+	padding-left:	5px;
+	padding-right:	5px;
+}
+#endorseD h2
+{
+	margin:		0 0 5px 0;
+	font-size:	1.6em;
+
+	text-decoration:	underline;
+	color:			#428BCA;
+}
+#endorseD h3
+{
+	margin:		0 0 5px 0;
+	font-size:	1.4em;
+}

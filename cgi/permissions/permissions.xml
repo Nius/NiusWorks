@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+NiusWorks.com Permissions Definition
+====================================
+
+This is the definition file for NiusWorks.com permissions.
+Permissions take the following format:
+
+<permission name='string' alias='string' default='int'>
+	<description>string</description>
+	<level role='string'>
+		[<seat>see below</seat>]
+		[<seat ...]
+	</level>
+	[<level ...]
+</permission>
+
+DEFAULTS:
+When these definitions are interpreted, the following defaults
+will be used:
+:	<seat>+</seat>
+:	<unseat>+</unseat>
+
+SEAT/UNSEAT
+The inner text of <seat> and <unseat> tags can take any of
+these formats:
+:	+	Denotes any level after (of greater value than)
+		this one.
+:	-	Denotes any level below (of lesser value than)
+		this one.
+:	%	Denotes explicitly no level of any permission.
+:	4	Denotes only the level at index 4.
+:	ADM:3	Denotes level 3 of the permission aliased 'ADM'.
+:		A comma-separated combination of integers and
+		ALIAS:int references.
+:	ADM:3+	Denotes level 3 or better of the ADM permission.
+:	ADM:*	Denotes any level of the ADM permission.
+
+-->
+
+<root>
+
+<!--	0	-->
+<permission name='Administrate' alias='ADM' default='0'>
+	<summary>Website and server administration</summary>
+	<description>Ability to view and edit website-mechanical information, such as user account tables, login information, and system controls. An ADM:0 user would generally be an average user, and an ADM:4 user is probably a webmaster and server admin.</description>
+<!--0--><level role='No Privilege'/>
+<!--1--><level role='View Information'/>
+<!--2--><level role='Administrate'/>
+<!--3--><level role='Admin + Delegate'/>
+<!--4--><level role='Super User'>
+		<seat>%</seat>
+		<unseat>%</unseat>
+	</level>
+</permission>
+
+<!--	1	-->
+<permission name='Personal' alias='NPH' default='0'>
+	<summary>Ability to link Nius with NPH</summary>
+	<description>Ability to see information which links Nius' IRL identity with his Nius Atreides persona. An NPH:0 user will be none the wiser about Nius' real identity, while an NPH:2 user will be able to see complete IRL contact details for Nius.</description>
+<!--0--><level role='Nius Only'/>
+<!--1--><level role='Web Addresses Only'/>
+<!--2--><level role='Complete'/>
+</permission>
+
+<!--	2	-->
+<permission name='Commentary' alias='COM' default='1'>
+	<summary>Ability to generate new content</summary>
+	<description>Ability to leave publicly visible feedback on the website, such as commentary on blog posts. A COM:0 user will experience UGC as read-only, while a COM:1 user will experience it in much the way one interacts with a forum.</description>
+<!--0--><level role='Silent'/>
+<!--1--><level role='Commentary Enabled'/>
+</permission>
+
+<!--	3	-->
+<permission name='Service: FileDump' alias='SFD' default='0'>
+	<summary>Ability to use the FileDump service</summary>
+	<description>Ability to upload files via the FileDump service. An SFD:0 user will have no idea that the SFD service exists, while an SFD:2 user will be able to use the service without restriction.</description>
+<!--0--><level role='No Privilege'/>
+<!--1--><level role='Limited'/>
+<!--2--><level role='Unlimited'/>
+</permission>
+
+<!--    4       -->
+<permission name='Service: Achievements' alias='ACH' default='1'>
+	<summary>Ability to use the Achievements service</summary>
+	<description>Ability to track and accumulate achievements on the Achievements service. Most users are ACH:1; ACH:0 is an active bar of usage. ACH:2 is a service administrator with ability to create and modify achievements.</description>
+<!--0--><level role='Usage Denied'/>
+<!--1--><level role='Standard Usage'/>
+<!--2--><level role='Administrative'/>
+</permission>
+
+<!--    5       -->
+<permission name='DrCharlesHarrell.com Primary User' alias='CLH' default='0'>
+	<summary>Ability to submit and edit content on DrCharlesHarrell.com (charles.harrell-family.net).</summary>
+	<description>This is intended solely for Charles Harrell himself, plus whatever top-level administrative users which have the ability to act on his behalf. This permission should be considered access for a primary user and not an administrative permission.</description>
+<!--0--><level role='No Privilege'/>
+<!--1--><level role='Full Privilege'/>
+<!--2--><level role='Administrative'/>
+</permission>
+
+<!--	6	-->
+<permission name='Service: Homepage' alias='HMP' default='0'>
+	<summary>Ability to use the Homepage service</summary>
+	<description>Ability to create and access a customized homepage on the NiusWorks server.</description>
+<!--0--><level role='No Privilege'/>
+<!--1--><level role='Full Privilege'/>
+</permission>
+
+<!--	7	-->
+<permission name='Service: Financial Projector' alias='FPJ' default='0'>
+	<summary>Ability to use the Financial Projector service</summary>
+	<description>Ability to access Nius' financial projections.</description>
+<!--0--><level role='No Privilege'/>
+<!--1--><level role='Full Privilege'/>
+</permission>
+
+</root>

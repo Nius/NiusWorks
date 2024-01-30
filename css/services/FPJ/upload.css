@@ -1,0 +1,20 @@
+#inputFile-label
+{
+	margin-top: 0.5em;
+}
+#inputFile
+{
+	display: none;
+}
+select
+{
+	margin-bottom: 1em;
+}
+#errP
+{
+	margin: 0 0 0 1em;
+}
+#inputFile-label
+{
+	margin: 0;
+}

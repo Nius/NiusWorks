@@ -1,0 +1,16 @@
+#crude_table
+{
+	margin-top:	0.5em;
+	margin-bottom:	0.5em;
+}
+#crude_table td,
+#crude_table th
+{
+	border:		1px #555555 solid;
+	padding:	0 1em 0 1em;
+	text-align:	center;
+}
+#crude_table .no-border
+{
+	border:		none;
+}

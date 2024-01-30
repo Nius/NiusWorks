@@ -1,0 +1,28 @@
+#classesT
+{
+	width:			100%;
+}
+#classesT thead th
+{
+	font-weight:		bold;
+}
+#classesT tr:hover
+{
+	background-color:	#222222;
+}
+.controlTD
+{
+	width:			4em;
+}
+.controlTD button
+{
+	max-width:		3em;
+}
+.typeTD
+{
+	width:			8em;
+}
+.nameTD
+{
+	width:			10em;
+}

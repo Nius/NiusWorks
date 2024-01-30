@@ -1,0 +1,71 @@
+.h3
+{
+	color:		#AAAAFF;
+	margin-bottom:	0px;
+	text-align:	left;
+}
+h4
+{
+	font-weight:	bold;
+	font-size:	1.25em;
+	color:		#AAAAFF;
+	margin-top:	0px;
+	margin-bottom:	0px;
+}
+.table-condensed > tbody > tr > td:last-child
+{
+	padding-top:	1.5em;
+	vertical-align:	middle;
+}
+#yt_cell
+{
+	padding-top:	0.5em;
+}
+.redditIco
+{
+	height:		3em;
+	width:		3em;
+}
+hr
+{
+	margin-top:	10px;
+	margin-bottom:	10px;
+	color:		#888888;
+	border-top:	1px solid #888888;
+}
+#date
+{
+	color:		#888888;
+	font-style:	italic;
+	font-size:	10px;
+}
+blockquote
+{
+	background-color:	#0C0C0C;
+
+	border-color:		#AAAAAA;
+	border-radius:		8px;
+
+	text-align:		justify;
+}
+#mp4player
+{
+	width:			100%;
+	max-width:		500px;
+
+	border-radius:		8px;
+	border:			1px solid #555555;
+}
+code
+{
+	background-color:	transparent;
+	color:			#DFDFFF;
+	padding:		0;
+	font-weight:		bold;
+}
+
+img
+{
+	max-width:		100%;
+}
+

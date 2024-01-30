@@ -1,0 +1,46 @@
+#brand
+{
+	cursor:	pointer;
+	text-decoration:	none;
+}
+#brandHead
+{
+	width:	35px;
+}
+.navbar-nav > li > a
+{
+	line-height:		34px;
+	text-decoration:	none;
+}
+.navbar-toggle
+{
+	padding-top:	15px;
+}
+
+.dropdown-menu .glyphicon
+{
+	margin-right:	5px;
+	color:		#666666;
+}
+/*
+#nliN.newNews
+{
+	background-image:	-webkit-linear-gradient(top,#7c7c3c 0,#222 100%);
+	background-image:	linear-gradient(to bottom,#3c7c3c 0,#222 100%);
+	background-repeat:	repeat-x;
+	border-color:		black;
+	border-style:		solid;
+	border-width:		0px 1px 0px 1px;
+}
+
+/*
+ * #nliA
+ * {
+ * 	background-image:	-webkit-linear-gradient(top,#7c7c3c 0,#222 100%);
+ * 		background-image:	linear-gradient(to bottom,#7c7c3c 0,#222 100%);
+ * 			background-repeat:	repeat-x;
+ * 				border-color:		black;
+ * 					border-style:		solid;
+ * 						border-width:		0px 1px 0px 1px;
+ * 						}
+ * 						*/

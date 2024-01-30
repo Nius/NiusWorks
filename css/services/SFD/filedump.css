@@ -1,0 +1,17 @@
+#filesT th
+{
+	border-bottom:		1px solid #888888;
+}
+#filesT tr:hover td
+{
+	background-color:	#333333;
+}
+a, a:hover
+{
+	color:			#BBBBBB;
+	text-decoration:	none;
+}
+span.glyphicon-remove
+{
+	cursor:			pointer;
+}

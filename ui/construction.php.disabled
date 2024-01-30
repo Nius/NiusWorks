@@ -1,0 +1,24 @@
+<?php
+$PAGE_TITLE = 'NW Home';
+?>
+
+<?php require_once('/web/serve/niusworks.com/niusworks.com/resources/modules/header.php'); ?>
+<link type='text/css' rel='stylesheet' href='/css/construction.css'></link>
+<script type='text/javascript' src='/js/construction.js'></script>
+</head>
+
+<body>
+
+<div class='container-fluid'>
+
+<?php /* Row 0 */ ?>
+<div class='row'>
+
+NiusWorks is currently under construction.
+
+</div> <?php /* End Row 0 */ ?>
+
+</div> <?php /* End container */ ?>
+
+</body>
+</html>

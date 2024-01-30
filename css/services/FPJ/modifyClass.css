@@ -1,0 +1,126 @@
+p, h3
+{
+	font-size:	1em;
+	font-weight:	bold;
+}
+#modeSel, #className
+{
+	margin-bottom:	1em;
+}
+#modeSel:disabled,
+#className:disabled
+{
+	background-color: 	#111111;
+	opacity:		0.7;
+}
+.dark-gray
+{
+	color:			#888888;
+}
+#requery, #commit
+{
+	margin-top:		1em;
+	margin-bottom:		1em;
+}
+
+#addSubTxt
+{
+	width:			30em;
+}
+.ui-autocomplete.ui-menu
+{
+	max-width:		30em;
+	background-color:	#222222;
+	padding-left:		1em;
+	cursor:			pointer;
+}
+.ui-autocomplete.ui-menu li
+{
+	list-style-type:	none;
+}
+.ui-autocomplete.ui-menu a
+{
+	text-decoration:	none;
+	color:			inherit;
+}
+.ui-helper-hidden-accessible
+{
+	display:none;
+}
+#subClasses
+{
+	margin-top:		1em;
+}
+.subClass:not([hidden])
+{
+	background-color:	#333333;
+	border-radius:		5px;
+	padding:		0 0.5em 0 0.5em;
+	display:		inline-block;
+}
+.subClass:not(:nth-child(2))
+{
+	margin-left:		1em;
+}
+.subClass .close
+{
+	opacity:		1;
+	color:			#888888;
+	text-shadow:		none;
+}
+
+/* Matches Table */
+
+#matchesT
+{
+	width: 		100%;
+}
+#matchesT tr:hover
+{
+	background-color:	#333333;
+}
+#matchesT td
+{
+	margin-bottom:	0.5em;
+}
+.date-td
+{
+	width: 		6em;
+	text-align:	center;
+}
+.account-td
+{
+	width:		11em;
+	text-align:	center;
+	border-left:	1px #555555 solid;
+	border-right:	1px #555555 solid;
+}
+th.amount-td
+{
+	text-align:	center;
+}
+td.amount-td
+{
+	font-family:	courier;
+	font-weight:	bold;
+	text-align:	right;
+	padding-right:	0.5em;
+	width:		6em;
+}
+.descr-td
+{
+	padding-left:	1em;
+	border-left:	1px #555555 solid;
+}
+.positive
+{
+	color:		#88FF88;
+}
+.negative
+{
+	color:		#FF8888;
+}
+#matchErrText
+{
+	font-weight:	bold;
+}

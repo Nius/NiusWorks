@@ -1,0 +1,22 @@
+#headerT td
+{
+	padding: 0 1em 0 1em;
+}
+#titleP
+{
+	font-size:	2em;
+	margin: 	0;
+}
+#newAccountM select,
+#newAccountM input
+{
+	margin-bottom:	0.5em;
+}
+#mft
+{
+	margin:		0 0 0 auto;
+}
+#mferr
+{
+	font-weight:	bold;
+}

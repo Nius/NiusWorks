@@ -1,0 +1,57 @@
+#bannerP
+{
+	color:		#BBBBFF;
+	margin-bottom:	0;
+}
+#subBannerP
+{
+	font-size:	10px;
+}
+
+.area
+{
+	background-color:	#252525;
+	margin-bottom:		10px;
+	padding:		5px 5px 3px 5px;
+	border-radius:		8px;
+}
+.area > p
+{
+	font-size:	15px;
+	color:		#BBBBDD;
+	font-weight:	bold;
+}
+
+#errP
+{
+	font-size:	12px;
+	color:		#FF0000;
+	font-weight:	bold;
+	text-align:	center;
+}
+
+table
+{
+	width:		100%;
+}
+td:last-child
+{
+	text-align:	right;
+}
+
+/* POPOVERS */
+.popover, .popover-title
+{
+	background-color:	#151515;
+	border-color:		#484848;
+	color:			#BBBBFF;
+}
+.popover .arrow
+{
+	display:	none;
+}
+.popover-title
+{
+	font-style:	italic;
+	font-weight:	bold;
+}

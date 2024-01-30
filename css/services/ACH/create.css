@@ -1,0 +1,45 @@
+#reloadB
+{
+	margin-bottom:	1em;
+}
+#radioFG-A, #radioFG-B
+{
+	border-bottom:	1px solid #555555;
+	padding-bottom:	1em;
+}
+label.checkbox-inline,
+label.radio-inline
+{
+	font-weight:	bold;
+}
+#accrueQTY
+{
+	margin-left:	5px;
+	width:		5em;
+	color:		#555555;
+}
+#points
+{
+	width:		5em;
+}
+#parentInfo
+{
+	color:		#BBCCFF;
+}
+.leftD
+{
+	border-right:	1px solid #555555;
+}
+.leftD > .leftD
+{
+	padding-left:	0px;
+}
+.spitem
+{
+	margin:		0;
+	color:		#BBCCFF;
+}
+#submitB
+{
+	margin-right:	5px;
+}

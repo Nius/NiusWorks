@@ -1,0 +1,100 @@
+body
+{
+	font-size:	1.5em;
+}
+
+#refreshT
+{
+	margin-bottom:	1em;
+}
+#refreshT td
+{
+	vertical-align:	middle;
+}
+#errP
+{
+	font-weight:	bold;
+}
+
+#calendar
+{
+	width:		100%;
+}
+#calendar table
+{
+	border:		1px transparent solid;
+}
+#calendar table:hover
+{
+	border:		1px #FFFF00 solid;
+}
+#calendar table td
+{
+	border:		none;
+	vertical-align:	middle;
+	cursor:		pointer;
+	padding:	0;
+	line-height:	1em;
+}
+#calendar table td.left
+{
+	padding-left:	0.25em;
+}
+#calendar table td.right
+{
+	padding-right:	0.25em;
+}
+
+#calendar th
+{
+	text-align:	center;
+}
+#calendar td
+{
+	height:		5em;
+	border:		1px #AAAAAA solid;
+	padding:	0 0.5em 0.5em 0.5em;
+	vertical-align:	top;
+	width:		14.28%
+}
+#calendar table.ignored
+{
+	text-decoration:	line-through;
+	color:			#FFFF00;
+}
+
+#pmin, #fneg, #high
+{
+	font-weight:	bold;
+	margin-top:	0.5em;
+}
+
+p.mday
+{
+	font-weight:	bold;
+	margin:		0;
+}
+.charge
+{
+	color:		#FF0000;
+}
+.income
+{
+	color:		#00FF00;
+}
+.right
+{
+	text-align:	right;
+}
+
+.total
+{
+	color:		#AAAAFF;
+	font-weight:	bold;
+	text-align:	center;
+}
+
+.neg
+{
+	background-color:	#330000;
+}

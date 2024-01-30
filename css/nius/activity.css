@@ -1,0 +1,27 @@
+.date
+{
+	color:		#888888;
+	font-style:	italic;
+	font-size:	10px;
+	margin-bottom:	0px;
+}
+.body
+{
+	color:		#88BB88;
+	margin-bottom:	10px;
+}
+
+.lpLink
+{
+	text-decoration:	none;
+}
+.lpLink:hover div
+{
+	background-color:	#0C0C0C;
+	padding:		-5px;
+	border-radius:		0 8px 8px 0;
+}
+.lpLink .body
+{
+	color:		#CCCC88;
+}
