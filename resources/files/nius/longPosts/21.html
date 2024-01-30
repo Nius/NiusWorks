@@ -1,0 +1,102 @@
+<link rel='stylesheet' type='text/css' href='/css/nius/blog_21.css'></link>
+With the help of my fellow Satisfactory enthusiast, <a href="https://steamcommunity.com/id/Chaoscow25/">ChaosCow</a>, I have created a spreadsheet for planning out a complete factory from ore to elevator. The spreadsheet can be found <a target='_blank'  href="https://docs.google.com/spreadsheets/d/1eX1teGu9Itiq1JVNMMqdTeHMDZHOaLIO58I2eQessKk/edit?usp=sharing">here</a>.
+<h3>Overview</h3>
+The spreadsheet is designed to hit a target production rate of the four final space elevator items - Assembly Director System, Magnetic Field Generator, Nuclear Pasta, and Thermal Propulsion Rocket. You can put in the target amounts yourself, and the entire rest of the spreadsheet will adjust accordingly. You need only determine how much you want out and which alternate recipes you want to use, and the numbers all fall into place automatically.
+<h3>Features</h3>
+<ul>
+	<li>All alternate recipes are programmed in - just use the dropdown menu on each product's page to select which one you want to use.</li>
+	<li>Power needs are automatically calculated for the whole factory, including whatever machines are necessary to process fuel for the power plant. Select which fuel type you want to burn from the dropdown on the power generation page and everything else will adjust accordingly. This includes plutonium, and the power <i>generated</i> from producing plutonium is figured into the calculations as well.</li>
+	<li>Oil processing uses the <a href='#chaos'>Chaos Method</a> to provide a more than 50% increase in return on crude oil processing. <a href='#chaos'>Details below.</a></li>
+	<li>Oil processing is <a href='#linopt'>automatically optimized</a> to use the lowest possible number of refineries to meet the entire factory's needs. <a href='#linopt'>Details below.</a></li>
+	<li>Clock speeds for mining, production, and power are all separately adjustable. This is mainly for those who play with mods, so that higher-tier machines can be accounted for by the spreadsheet.</li>
+</ul>
+<h3>How to Use</h3>
+To use this spreadsheet for yourself, simply follow these steps:
+<ol>
+	<li>Ensure that you have a Google Drive account.</li>
+	<li>With the spreadsheet open, click <b>File</b> and choose <b>Make a Copy</b>. This will create an exact copy in your own Google Drive which you can then edit.</li>
+</ol>
+To use the script which automatically calculates power usage and optimizes oil processing, you'll need to enable it first:
+<ol start='3'>
+	<li>With the spreadsheet open, click <b>Tools</b> and choose <b>Script Editor</b>.</li>
+	<li>At the top of the page, click <b>Run</b>. Google will complain that the app is unverified but since you're running your own local copy of the app, for which you can see the source code, there is no danger to you. Click on <b>advanced</b> and approve the app.</li>
+	<li>To verify that the script is working, go to the <b>Configuration</b> page in the spreadsheet and enable either of the auto options (via the dropdown). The box next to it should change from "Done" to "Working...".</li>
+</ol>
+<h3>Miscellaneous Notes</h3>
+<ul>
+	<li>The spreadsheet actually slightly <i>over</i>-estimates required quantities of resources due to rounding up machine quotas. For example, if there is a demand for 50 total units per minute of product X and its recipe produces 30 parts per minute per machine, the spreadsheet will call for 2 machines resulting in 10 leftover parts per minute. The demand for each component of the recipe for product X will be adjusted to satisfy the full consumption of both machines for product X (all 60 parts per minute, not just the 50 actually needed). As a result, there will be some excess parts produced every step of the way. For this reason, recipes with more than one output should have overflow sinks so that a backup of one product does not halt production of the other.</li>
+	<li>As a result of minor over-estimation of resource quotas, not all machines in the factory will be powered up at all times. Many processes will have (at most) one machine not running due to overflow. For this reason the actual power consumption of the factory will likely be slightly lower than the spreadsheet predicts.</li>
+	<li>This spreadsheet has only been tested with Google Sheets.</li>
+</ul>
+<a id='chaos' class='plain'><h3>The Chaos Method</h3></a>
+</div></div></div><div class='row'><div class='col-xs-10 col-xs-offset-1 col-md-5 col-md-offsfet-1'>
+		This 4-phase method for oil processing comes from <a href='https://steamcommunity.com/id/Chaoscow25/'>ChaosCow</a> and significantly increases returns from a given amount of crude oil by "stretching" it with water.
+The process can be summarized as follows:
+<ul>
+	<li><b>Phase 1: Resinize.</b> Convert crude to heavy oil residue and polymer resin.</li>
+	<li><b>Phase 2: Fuel.</b> Stretch crude oil with water to produce fuel.</li>
+	<li><b>Phase 3: De-resinize.</b> Stretch polymer resin with water to produce rubber and plastic.</li>
+	<li><b>Phase 4: Recycle.</b> Cross-recycle plastic and rubber into each other, stretching them with fuel.</li>
+</ul>
+Introducing water in phases 2 and 3, and then feeding back the already-stretched fuel in phase 4, represents an approximate 57% increase in the amount of plastic and rubber that can be created from a supply of crude oil. The mathematical theory for this increase is included here.
+Note that these calculations actually slightly <i>over</i>-estimate the amount of crude needed, since both the resin and residue recipes in phase 1 produce excess residue and resin (respectively) as a by-product which can be fed back to reduce the production quota.
+<br><br>
+To satisfy demand for resin and residue elsewhere in the factory, more refineries can be added to phase 1. For details on this, see "Linear Optimization" below.
+</div><div class='col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0'>
+	<img src='/resources/images/Chaos-Method-Math.png'></img>
+</div>
+</div>
+<div class='row'><div class='col-xs-10 col-xs-offset-1'>
+<a id='linopt' class='plain'><h3>Linear Optimization</h3></a>
+Most factories will require both Heavy Oil Residue and Polymer Resin.
+The recipe for either of these products also produces the other, but the
+recipes each produce these products at different rates. This situation
+is described by the following table:
+
+<table id='crude_table'><tbody>
+<tr><th class='no-border'></th><th>PR</th><th>HOR</th></tr>
+<tr><td>Recipe PR</td><td>130</td><td>20</td></tr>
+<tr><td>Recipe HOR</td><td>20</td><td>40</td></tr>
+</tbody></table>
+
+The resin recipe is more efficient in
+producing resin while the residue recipe
+is more efficient in producing residue.
+<br><br>
+The problem is that choosing one and only one recipe to meet the needs
+for both PR and HOR will waste enormous amounts of power and space with
+a huge number of machines while producing huge amounts of excess product
+which must be either sunk or stored.
+<br><br>
+The question becomes this: "<i>given a target amount of PR and a target
+amount of HOR, what is the smallest number of machines for each recipe
+that can be used to hit or exceed both targets?</i>"
+<br><br>
+The setup for this case involves two parallelograms:
+<code>
+<br>
+HOR_Demand &lt;= 40h + 20p  &lt;= upper_bound
+<br>
+PR_Demand  &lt;= 20h + 130p &lt;= upper_bound
+</code>
+<br>
+<code>p</code> indicates the number of machines using the PR recipe, while
+<br>
+<code>h</code> indicates the number of machines using the HOR recipe.
+<br>
+The <code>upper_bound</code> is an arbitrary number greater than either demand.
+<br><br>
+A new parallelogram of valid solutions is formed by the intersection
+of these two parallelograms. Any point <code>(h,p)</code> inside this new
+parallelogram represents a combination of machines that will:
+<ul>
+	<li>Produce enough HOR</li>
+	<li>Produce enough PR</li>
+	<li>Not exceed <code>upper_bound</code> total amount of PR and HOR.</li>
+</ul>
+The point representing the lowest possible number of machines in total
+will be the bottom-left corner of the solution parallelogram, where
+<code>h+p</code> is lowest.
+<br><br>
+Fortunately Google's OR-Tools library provides a service for easily
+finding a solution to this kind of problem. This spreadsheet includes a script which uses this library to automatically optimize the number of refineries producing HOR and PR.
